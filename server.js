@@ -41,5 +41,5 @@ function requestListener(req, res) {
 
 // create the server, listen for HTTP request on port 4000
 http.createServer(requestListener).listen(port);
-console.log('Serving on port ' + port);
+console.log('Serving Julia CV on port ' + port);
 

@@ -4,11 +4,6 @@ body {
   background-image: url('relax5.jpg');
   background-size: cover;
 }
-#content {
-  background-color: rgba(195,238,231,0.6);
-  margin: 15px;
-  padding: 15px 30px;
-}
 h1, h2, h3{
   text-align: center;
 }
@@ -16,14 +11,17 @@ li {
   padding: 10px;
   list-style-type: none;
 }
-a {
+#julia a{
+  color: black;
   text-decoration: none;
-  color: gray;
 }
-
-a:hover {
+#julia a:hover {
   color: lightblue;
-  background-color: white;
+}
+#content {
+  background-color: rgba(195,238,231,0.6);
+  margin: 15px;
+  padding: 15px;
 }
 
 /* DROPDOWN MENU */
@@ -31,10 +29,20 @@ a:hover {
   background-color: white;
   margin-top: 10px;
 }
+#nav ul {
+  text-align: center;
+}
 #nav > a {
   display: none;
   background-color: white;
   padding: 5px;
+}
+#nav a {
+  text-decoration: none;
+  color: gray;
+}
+#nav a:hover {
+  color: lightblue;
 }
 #nav li {
   position: relative;
@@ -65,11 +73,19 @@ a:hover {
 }
 
 /* DROPDOWN MENU WEB RESPONSIVE */
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 640px) {
   #nav {
     position: relative;
   }
+  /*Button menu*/
   #nav > a {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    text-align: left;
+    text-indent: -9999px;
+    background-color: rgba(195,238,231,0.8);
+    position: relative;
   }
   #nav:not( :target ) > a:first-of-type,
   #nav:target > a:last-of-type {
@@ -96,11 +112,17 @@ a:hover {
   }
 }
 
+#courses a {
+  text-decoration: none;
+  color: gray;
+}
+#courses a:hover {
+  color: lightblue;
+}
 
 /* Sticky footer styles */
 .footer {
-/*  position: fixed;
-*/  bottom: 0;
+  bottom: 0;
   width: 100%;
   height: 60px;
   text-align: center;
