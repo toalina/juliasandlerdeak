@@ -1,10 +1,9 @@
+node_modules
+public
+public/css
+public/imgs
+public/js
+public/views
+
 .DS_Store
-
-node_modules/
-public/
-public/css/
-public/imgs/
-public/js/
-public/views/
-
 
