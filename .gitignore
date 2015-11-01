@@ -2,6 +2,10 @@
 .DS_Store
 
 node_modules/
-public
+public/
+public/css/
+public/imgs/
+public/js/
+public/views/
 
 
