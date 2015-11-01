@@ -1,0 +1,11 @@
+footer {
+  background-image: url('../imgs/relax5.jpg');
+  background-size: cover;
+  background-position: center center;
+  padding: 2em;
+  p {
+    text-align: center;
+    color: $color-secondary-accent;
+    font-family: $baskerville;
+  }
+}

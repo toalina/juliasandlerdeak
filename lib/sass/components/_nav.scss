@@ -1,0 +1,68 @@
+/* DROPDOWN MENU */
+.nav {
+  font-family: $lato;
+  margin-top: 1em;
+  ul {
+    text-align: center;
+  }
+  li {
+    position: relative;
+    padding: 5px;
+  }
+  a {
+    text-decoration: none;
+    color: $color-secondary-accent;
+    // &:hover {
+    //   color: $color-accent-light;
+    // }
+  }
+  > a {
+    display: none;
+
+    padding: 20em;
+    color: $color-base;
+  }
+}
+
+/* first level - CV */
+.nav {
+  > ul {
+    height: 2em;
+    > li {
+      width: 10em;
+      height: 2em;
+      // float: left;
+      @media only screen and (min-width: $breakpoint) {
+        width: 12em;
+      }
+
+    }
+  }
+}
+
+/* second level - dropdown part! */
+.nav {
+  li {
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+    ul {
+      display: none;
+      position: static;
+      top: 100%;
+      background-color: $color-primary;
+      padding: 1em;
+      li {
+        padding: 1em;
+        a {
+          &:hover {
+            color: $color-accent-light;
+          }
+        }
+      }
+    }
+  }
+}
+
