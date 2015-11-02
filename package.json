@@ -1,18 +1,21 @@
 {
   "name": "simple-site",
   "version": "1.0.0",
+  "description": "Site for Julia Sandler Deak CV",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/toalina/juliasandlerdeak"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Alina To <alina.to@gmail.com>",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/toalina/juliasandlerdeak/issues"
   },
-  "description": "Site for Julia Sandler Deak CV",
   "dependencies": {
     "express": "^4.13.3",
     "gulp": "^3.9.0",
