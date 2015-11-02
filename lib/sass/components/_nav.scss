@@ -12,13 +12,9 @@
   a {
     text-decoration: none;
     color: $color-secondary-accent;
-    // &:hover {
-    //   color: $color-accent-light;
-    // }
   }
   > a {
     display: none;
-
     padding: 20em;
     color: $color-base;
   }
@@ -29,13 +25,12 @@
   > ul {
     height: 2em;
     > li {
-      width: 10em;
+      width: 11em;
       height: 2em;
       // float: left;
       @media only screen and (min-width: $breakpoint) {
         width: 12em;
       }
-
     }
   }
 }
@@ -51,11 +46,12 @@
     ul {
       display: none;
       position: static;
-      top: 100%;
+      margin-top: 1em;
+      // top: 100%;
       background-color: $color-primary;
       padding: 1em;
       li {
-        padding: 1em;
+        padding: 0.5em;
         a {
           &:hover {
             color: $color-accent-light;

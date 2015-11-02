@@ -65,7 +65,7 @@
 	    $('#container').remove();
 	    $('#content').load(url + ' #content').hide().fadeIn('fast');
 	  });
-	  // when you click on nav a with title show navigation
+
 
 	});
 

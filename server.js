@@ -21,6 +21,6 @@ app.get('/*', function(req, res) {
   res.status(404).sendFile(__dirname + '/app/views/404.html');
 });
 
-app.listen(app.get('port'), function(){ //environmental variable process.env pulls the port from the command line, if it doesn't exist it will go to 3000.  in the command line we can now say "PORT=5000 node server" and the server will pick up on the change.  SWEET
+app.listen(app.get('port'), function(){
   console.log('server is running on port 5000');
 });

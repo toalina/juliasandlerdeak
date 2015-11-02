@@ -1,25 +1,11 @@
-.landing-container {
-  padding: 3em 1em;
-  @media only screen and (min-width: $breakpoint) {
-    padding: 1em 5em;
-  }
-  .landing-heading {
-    font-family: $lato;
-    text-align: left;
-    font-size: $large;
-    padding: 0.5em;
-    @media only screen and (min-width: $breakpoint) {
-
-    }
-  }
-}
 .content {
   background-color: $color-accent;
   color: $color-base;
   padding: 1em;
   font-family: $lato;
   @media only screen and (min-width: $breakpoint) {
-    padding: 1em 5em;
+    padding: 1em 3em;
+    margin: 1em 3em;
   }
   h1, h3, h4 {
     font-family: $baskerville;
@@ -48,10 +34,11 @@
   ul {
     font-size: $small;
     li {
-      padding: 1em;
+      padding: 0.3em;
       ul {
+        padding: 0.3em;
         li {
-          padding: 0.7em;
+          padding: 0.3em;
         }
       }
     }
