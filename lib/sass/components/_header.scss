@@ -23,5 +23,22 @@ header {
     font-family: $baskerville;
     font-weight: $weight-normal;
   }
+  .button-wrapper {
+    // margin: 0 auto;
+    text-align: center;
+    margin-top: 1em;
+  }
+  button {
+    font-size: $x-small;
+    padding: 1em 2em;
+    border-radius: 5px;
+    border: none;
+    background: $color-primary;
+    color: $color-base;
+    &:hover {
+      cursor: pointer;
+      background:$color-accent-light;
+    }
+  }
 }
 

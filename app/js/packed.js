@@ -46,6 +46,8 @@
 
 	__webpack_require__(1);
 	__webpack_require__(2);
+	__webpack_require__(3);
+	__webpack_require__(4);
 
 
 /***/ },
@@ -72,6 +74,85 @@
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	( function( window ) {
+
+	'use strict';
+
+	// class helper functions from bonzo https://github.com/ded/bonzo
+
+	function classReg( className ) {
+	  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+	}
+
+	// classList support for class management
+	// altho to be fair, the api sucks because it won't accept multiple classes at once
+	var hasClass, addClass, removeClass;
+
+	if ( 'classList' in document.documentElement ) {
+	  hasClass = function( elem, c ) {
+	    return elem.classList.contains( c );
+	  };
+	  addClass = function( elem, c ) {
+	    elem.classList.add( c );
+	  };
+	  removeClass = function( elem, c ) {
+	    elem.classList.remove( c );
+	  };
+	}
+	else {
+	  hasClass = function( elem, c ) {
+	    return classReg( c ).test( elem.className );
+	  };
+	  addClass = function( elem, c ) {
+	    if ( !hasClass( elem, c ) ) {
+	      elem.className = elem.className + ' ' + c;
+	    }
+	  };
+	  removeClass = function( elem, c ) {
+	    elem.className = elem.className.replace( classReg( c ), ' ' );
+	  };
+	}
+
+	function toggleClass( elem, c ) {
+	  var fn = hasClass( elem, c ) ? removeClass : addClass;
+	  fn( elem, c );
+	}
+
+	window.classie = {
+	  // full names
+	  hasClass: hasClass,
+	  addClass: addClass,
+	  removeClass: removeClass,
+	  toggleClass: toggleClass,
+	  // short names
+	  has: hasClass,
+	  add: addClass,
+	  remove: removeClass,
+	  toggle: toggleClass
+	};
+
+	})( window );
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	var menuLeft = document.getElementById( 'nav-main-s1' ),
+	    showLeft = document.getElementById( 'showLeft' ),
+	    body = document.body;
+
+	$('#showLeft').on('click', function() {
+	  classie.toggle( this, 'active' );
+	  classie.toggle( menuLeft, 'nav-main-open' );
+	});
+
+
+
+/***/ },
+/* 4 */
 /***/ function(module, exports) {
 
 	'use strict';

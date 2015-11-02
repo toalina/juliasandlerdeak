@@ -1,0 +1,102 @@
+/* General styles for all menus */
+.nav-main {
+  background: $color-primary;
+  position: fixed;
+  font-family: $lato;
+  font-weight: $weight-light;
+  font-size: $small;
+  a {
+    display: block;
+    color: $color-secondary-accent;
+
+
+    text-align: center;
+    &:hover {
+
+      color: $color-accent-light;
+    }
+    &:active {
+      background: $color-accent;
+      color: $color-base;
+    }
+  }
+  @media screen and (min-width: $breakpoint){
+    // position: static;
+    // border: none;
+    // ul {
+    //   float: right;
+    // }
+    // li {
+    //   display: inline-block;
+    //   text-align: center;
+    // }
+  }
+}
+
+/* Orientation-dependent styles for the content of the menu */
+.nav-main-vertical {
+  width: 11em;
+  height: 100%;
+  top: 0.1em;
+  z-index: 500;
+  @media screen and (min-width: $breakpoint){
+    // top: 12em;
+    // width: 100%;
+    // height: 63px;
+  }
+  a {
+    border-bottom: 1px solid $color-accent;
+    padding: 0.5em;
+    @media screen and (min-width: $breakpoint){
+      // border: none;
+      // padding: 1em;
+    }
+  }
+}
+
+/* Vertical menu that slides from the left or right */
+.nav-main-left {
+  left: -12.1em;
+  @media screen and (min-width: $breakpoint){
+    // left: 0em;
+  }
+  &.nav-main-open {
+    left: 0em;
+    @media screen and (min-width: $breakpoint){
+      // left: 0em;
+    }
+  }
+}
+
+/* Push classes applied to the body */
+.nav-main-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+  @media screen and (min-width: $breakpoint){
+    // overflow-x: initial;
+    // position: static;
+    // left: 0;
+  }
+}
+.nav-main-push-toright {
+  right: 12em;
+   @media screen and (min-width: $breakpoint){
+    // right: 0;
+  }
+}
+.nav-main-push-toleft {
+  right: -12em;
+   @media screen and (min-width: $breakpoint){
+    // right: 0;
+  }
+}
+
+/* Transitions */
+.nav-main,
+.nav-main-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
