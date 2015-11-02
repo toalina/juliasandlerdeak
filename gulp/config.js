@@ -26,10 +26,5 @@ module.exports = {
     directoryListing: false,
     open: false,
     port: 9000
-  },
-  production: {
-    cssSrc: dest + '/css/*.css',
-    jsSrc: dest + '/js/*.js',
-    dest: dest
   }
 };

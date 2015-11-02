@@ -6,8 +6,8 @@
     "url": "https://github.com/toalina/juliasandlerdeak"
   },
   "description": "Site for Julia Sandler Deak CV",
-
   "dependencies": {
+    "express": "^4.13.3",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-notify": "^2.2.0",
