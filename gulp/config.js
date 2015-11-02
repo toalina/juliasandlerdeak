@@ -1,5 +1,5 @@
 var src = "./lib";
-var dest = "./public";
+var dest = "./app";
 
 module.exports = {
   javascript: {
